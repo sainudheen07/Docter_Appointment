@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+     <!-- NEWS DETAIL -->
+     <section id="news-detail" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-8 col-sm-7">
+                         <!-- NEWS THUMB -->
+                         <div class="news-detail-thumb">
+                              <div class="news-image">
+                                   <img src="{{docter.image.url}}" class="img-responsive" alt="" style=" height:700px">
+                              </div>
+                              <h3>More About.</h3>
+                              <p>{{docter.desc}}</p>
+
+<!--                              <ul>-->
+<!--                                   <li>Phasellus posuere nisi eleifend, vestibulum ipsum eleifend</li>-->
+<!--                                   <li>Nulla sapien neque, posuere vitae porta eu</li>-->
+<!--                                   <li>Fusce quis enim vel libero pulvinar gravida sed eu justo</li>-->
+<!--                              </ul>-->
+
+<!--                              <p>Nunc eget ex sed nisl rhoncus lacinia. Vestibulum porta lectus at est placerat, nec commodo purus dignissim. Suspendisse ac quam in metus laoreet auctor ac quis enim.</p>-->
+                              <div class="news-social-share">
+                                   <h4>Share your Experience</h4>
+                                        <a href="#" class="btn btn-primary"><i class="fa fa-facebook"></i>Facebook</a>
+                                        <a href="#" class="btn btn-success"><i class="fa fa-twitter"></i>Twitter</a>
+                                        <a href="#" class="btn btn-danger"><i class="fa fa-google-plus"></i>Google+</a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-5">
+                         <div style="padding-top:400px">
+                         <div class="news-sidebar">
+                              <div class="news-author">
+                                   <h4>{{docter.name}}</h4>
+                                   <h5>{{docter.qualification}}.</h5>
+                              </div>
+
+                              <div class="news-categories">
+                                   <h5>Specialised In</h5>
+
+                                   <h5>{{docter.department}} Department</h5>
+                              </div>
+
+
+                              <div class="news-tags">
+                                   <h4></h4>
+                                        <li><a href="{% url 'appoiment:FormDetail' %}" class="appointment-btn">Make an Appointment </a></li>
+
+                              </div>
+                         </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+{% endblock %}
